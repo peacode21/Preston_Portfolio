@@ -1,0 +1,290 @@
+/*Author: Prreston Sodipo*/
+
+/*Date: 6/27/2023 */
+@font-face{
+	font-family:Arial;
+	src: url('../fonts/cabin/cabin-medium-webfont.woff2');
+}
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about_info{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.author{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 225%;
+    animation: slideBottom .7s ease forwards;
+    animation-delay: .7s;
+}
+.author_intro{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: rgb(163, 163, 163);
+    animation: slideLeft .7s ease forwards;
+    animation-delay: .7s;
+}
+.author_name{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 350%;
+    animation: slideRight .7s ease forwards;
+    animation-delay: .7s;
+}
+.author_title{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 225%;
+    animation: slideTop .7s ease forwards;
+    animation-delay: .7s;
+}
+.author_pic_container{
+    margin-top:10%;
+    width:100%;
+    animation: zoomIn 1s ease forwards, floatImage 6s ease-in-out infinite;
+    animation-delay: .2s, 2s;
+    border-radius: 7%;
+}
+.author_name:hover{
+    color: rgb(145, 146, 247);
+}
+body{
+    background-color: black;
+}
+.btn{
+    color:white;
+}
+.btn_color{
+    background-color: rgb(145, 146, 247);
+    color:black;
+}
+.btn:hover{
+    background-color: aliceblue;
+    color: rgb(145, 146, 247);
+}
+.btn_nav:hover{
+    color: rgb(145, 146, 247);
+}
+.cv_button{
+    background-color: rgb(145, 146, 247);
+    color:black;
+    box-shadow: 0 0 5px rgb(145, 146, 247), 0 0 25px rgb(145, 146, 247), 0 0 50px rgb(145, 146, 247), 0 0 200px rgb(145, 146, 247);
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.cv_button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(105, 108, 254);
+    border: 1px solid white;
+}
+.cv_font{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fa-brands:hover{
+    margin-left: 1%;
+    color:azure;
+}
+.fa-brands{
+    margin-left: 1%;
+    color: rgb(145, 146, 247);
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.footer_cont{
+    margin-left:5%;
+}
+.footer_div{
+    margin-right:8%
+}
+.form{
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+}
+.form_div:hover{
+    background-color: rgb(117, 116, 116);
+}
+.form_div{
+    margin-left: 5%;
+    border:1px solid rgb(138, 137, 137);
+    border-radius: 2%;
+    background-color: rgb(18, 17, 17);
+}
+.form_name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color:aliceblue
+}
+.heart:hover{
+    color:red;
+}
+.hr_proj{
+    width:55%;
+    color:white;
+    margin-left:5%;
+}
+.hr_footer{
+    width:75%;
+    color:white;
+    margin-left:5%;
+}
+.intro{
+    margin-left:3%;
+}
+.last_hr{
+    color:white;
+    margin-left:25%;
+    margin-right:25%;
+    width:50%;
+}
+.move_left{
+    animation: slideLeft .7s ease forwards;
+    animation-delay: .7s;
+}
+.move_right{
+    animation: slideRight .7s ease forwards;
+    animation-delay: .7s;
+}
+.name{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.name_container:hover{
+    font-size: 120%;
+}
+.nav{
+    margin-left: 70%;
+}
+.nav a {
+    display:inline-block;
+    transition: .3s;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.pic_container{
+    margin-left: 7%;
+    margin-right: 3%;
+}
+.picture{
+    width:80%;
+    padding:5%;
+    border-radius: 10%;
+}
+.picture:hover{
+    padding:0%;
+}
+.project_title{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:5%;
+    font-size: 250%;
+}
+.project_title:hover{
+    color: rgb(145, 146, 247);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:5%;
+    font-size: 250%;
+}
+.quote{
+    font-size:20px ;
+}
+.rights{
+    color:rgb(208, 207, 207);
+    margin-left:37%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.scroll_navbar{
+    height: 655px;
+    overflow-y: scroll;
+}
+.scroll_navbar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.scroll_navbar::-webkit-scrollbar-track {
+    background-color: rgba(41, 40, 40, 0.9);
+}
+
+.scroll_navbar::-webkit-scrollbar-thumb {
+    background-color: #dddddd;
+    border-radius: 35%;
+}
+.scroll_navbar::-webkit-scrollbar-thumb:hover {
+    background-color:rgb(145, 146, 247);
+}
+
+.scroll_navbar::-webkit-scrollbar-track:hover {
+    background-color: #ffffff;
+}
+.skills{
+    color:rgb(163, 163, 163);
+}
+.text_container{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.title{
+    color: rgb(145, 146, 247);
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}        
+@keyframes slideLeft {
+    0% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}       
+@keyframes floatImage {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+

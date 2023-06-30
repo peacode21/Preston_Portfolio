@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin login page</title>
+        		
+		<!-- Bootstrap CSS -->
+		<link href="{{ url_for('static',filename='bootstrap/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
+
+		<!-- Fontawesome -->
+		<link href="{{ url_for('static',filename='fontawesome/css/all.css')}}" rel="stylesheet" type="text/css">
+
+
+        <style type="text/css" rel="stylesheet">
+            .form_div{
+                margin-left:20%;
+                background-color: rgb(88, 139, 80);
+                border-radius: 5%;
+                margin-top: 10%;
+            }
+            .form_label{
+                font-family: Arial, Helvetica, sans-serif;
+                color:rgb(255, 255, 255);
+                font-size: large;
+            }
+            .form_title{
+                font-family: Arial, Helvetica, sans-serif;
+                color:rgb(255, 255, 255);
+                font-size: x-large;
+                margin-left: 30%;
+            }
+            .btn{
+                border-color: aliceblue;
+            }
+            .btn:hover{
+                background-color: aliceblue;
+                color: black;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-7 form_div">
+
+                {% with m=get_flashed_messages() %}
+                {% if m: %}
+                {% for msg in m%}
+                    <div class="col-11 mt-3 p-2 mx-4">
+                        <span class="alert alert-secondary">{{msg}}</span>
+                    </div>
+                
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                    <form method="post" action="{{ url_for('admin_login')}}" class="form p-5">
+                        <p class="form_title">Admin Form</p>
+                        <div class="row mt-3 mb-3">
+                            <div class="col">
+                                <span class="form_label">Login ID:</span>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" name="loginid" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span class="form_label">Password:</span>
+                            </div>
+                            <div class="col-9">
+                                <input type="password" name="pwd" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-12">
+                                <button type="submit" class="form-control btn btn-success">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

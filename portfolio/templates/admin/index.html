@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
+    
+                <!-- Meta -->
+
+                <meta charset="UTF-8">
+      
+                <meta name="keywords" content="web developer, ReactJS developer, Preston Sodipo, programmer portfolio, expert programmer, hire programmer, python jobs, back end developer, mysql, Github, front end developer, fullstack developer,python programmer">
+          
+                <meta name="description" content="An Expert Fullstack Developer, with years of experience and closed/done projects, im a fullstack developer with knowledge of Python/Flask, Github, SQL, AJAX, JSON...">
+                
+                <meta name="author" content="Preston Sodipo">
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                  
+    <!-- FontAwesome JS-->
+    <script defer src="{{ url_for('static',filename='assets/plugins/fontawesome/js/all.min.js')}}"></script>
+    
+    <!-- App CSS -->  
+    <link id="theme-style" rel="stylesheet" href="{{ url_for('static',filename='assets/css/portal.css')}}">
+
+</head> 
+
+<body class="app">   	
+    <header class="fixed-top">
+        <div id="app-sidepanel" class="app-sidepanel"> 
+	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
+	        <div class="sidepanel-inner d-flex flex-column">
+		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
+		        <div class="app-branding">
+		            <a class="app-logo" href="#"><img class="logo-icon me-2" src="{{ url_for('static',filename='assets/images/app-logo.svg')}}" alt="logo"><span class="logo-text">MENU</span></a>
+	
+		        </div>
+		        
+			    <div class="app-sidepanel-footer">
+				    <nav class="app-nav app-nav-footer">
+					    <ul class="app-menu footer-menu list-unstyled">
+                            <li><a class="nav-link nav-item" href="{{ url_for('admin_logout')}}">Log Out</a></li>
+					    </ul>
+				    </nav>
+			    </div>
+		       
+	        </div>
+	    </div>
+    </header>
+    
+    <div class="app-wrapper">
+	    
+	    <div class="app-content pt-3 p-md-3 p-lg-4">
+		    <div class="container-xl">
+			    
+			    <h1 class="app-page-title">Overview</h1>
+			    
+			    <div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
+				    <div class="inner">
+					    <div class="app-card-body p-3 p-lg-4">
+						    <h3 class="mb-3">Welcome!</h3>
+					    </div>
+					    
+				    </div>
+			    </div>
+			    <div class="row g-4 mb-4">
+			        <div class="col-12">
+				        <div class="app-card app-card-stats-table h-100 shadow-sm">
+					        <div class="app-card-header p-3">
+						        <div class="row justify-content-between align-items-center">
+							        <div class="col-auto">
+						                <h4 class="app-card-title">Contact List</h4>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="app-card-body p-3 p-lg-4">
+						        <div class="table-responsive">
+							        <table class="table table-borderless mb-0">
+										<thead>
+											<tr>
+												<th class="meta">Name</th>
+												<th class="meta stat-cell">Emails</th>
+												<th class="meta stat-cell">Date</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												{% if users != [] %}
+												
+												{% for u in users %}
+												
+												<td><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">{{ u.user_name }}</a></td>
+												<td class="stat-cell">{{ u.user_email }}</td>
+												<td class="stat-cell">
+													{% set now = current_time %}
+													{% set updated_at = u.user_date %}
+													{% set time_diff = now - updated_at %}
+
+													{% if time_diff.days > 7 %}
+														{{ updated_at.strftime('%B %d') }}
+													{% elif time_diff.days >= 1 %}
+														{{ time_diff.days }} days ago
+													{% elif time_diff.seconds >= 3600 %}
+														{{ time_diff.seconds // 3600 }} hours ago
+													{% elif time_diff.seconds >= 60 %}
+														{{ time_diff.seconds // 60 }} minutes ago
+													{% else %}
+														just now
+													{% endif %}
+												</td>
+												
+												<!-- Modal -->
+												<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+													<div class="modal-dialog">
+													  <div class="modal-content">
+														<div class="modal-header">
+														  <h5 class="modal-title" id="exampleModalLabel">Message from {{ u.user_name }}</h5>
+														  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">
+														  {{ u.user_message }}
+														</div>
+														<div class="modal-footer">
+														  <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+														</div>
+													  </div>
+													</div>
+												  </div>
+												{% endfor %}
+
+												{% else %}
+
+												<td><a href="#">N/A</a></td>
+												<td class="stat-cell">N/A</td>
+												<td class="stat-cell">N/A</td>
+
+												{% endif %}
+											</tr>
+										</tbody>
+									</table>
+						        </div>
+					        </div>
+				        </div>
+			        </div>
+			    </div>
+		    </div>
+	    </div>
+	    
+	    
+    </div>   					
+
+ 
+    <!-- Javascript -->          
+    <script src="{{ url_for('static',filename='assets/plugins/popper.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>  
+
+    <!-- Page Specific JS -->
+    <script src="{{ url_for('static',filename='assets/js/app.js')}}"></script> 
+
+</body>
+</html> 
+
