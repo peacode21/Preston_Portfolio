@@ -37,11 +37,11 @@
 
     </head>
 
-    <body>
+    <body class="scroll_navbar">
 
         <!-- The container for the html template -->
 
-        <div class="container-fluid scroll_navbar">
+        <div class="container-fluid">
 
                 <!-- Navigation buttons -->
 
@@ -64,18 +64,18 @@
                         <div class="col-6 mt-5 p-3">
                             <h2 class="author">Hey, I'm</h2>
                             <h2 class="author_name">Preston Sodipo</h2>
-                            <h3 class="author_title">And i'm a <span class="title">Fullstack Developer</span></h3>
+                            <h3 class="author_title">And i'm a <span class="title multiple-text">Fullstack Developer</span></h3>
                             <h5 class="author_intro mb-3">
                                <span class="quote">"</span> <b>I believe Programming can be more diverse. With a mission to bring ideas to life, I am pursuing new goals through expressions and thoughts.
                                 </b><span class="quote">"</span>
                             </h5>
-                            <a href="#" class="fa-brands fa-facebook fa-2x" style="--i:5;"></a>
-                            <a href="#" class="fa-brands fa-instagram fa-2x" style="--i:6;"></a>
-                            <a href="#" class="fa-brands fa-github fa-2x" style="--i:7;"></a>
-                            <a href="#" class="fa-brands fa-linkedin fa-2x" style="--i:8;"></a>
+                            <a href="https://www.facebook.com/sohdiepor.preston?mibextid=ZbWKwL" class="fa-brands fa-facebook fa-2x" style="--i:5;"></a>
+                            <a href="https://www.instagram.com/railzz_codes/" class="fa-brands fa-instagram fa-2x" style="--i:6;"></a>
+                            <a href="https://github.com/peacode21" class="fa-brands fa-github fa-2x" style="--i:7;"></a>
+                            <a href="https://www.linkedin.com/in/oluwamayowa-sodipo-6465401b7/" class="fa-brands fa-linkedin fa-2x" style="--i:8;"></a>
                             <div class="row">
                                 <div class="col mt-3 mb-3">
-                                    <a href="#" class="btn cv_button rounded-pill" style="--i:9;"><span class="cv_font">Download CV</span></a>
+                                    <a href="https://docs.google.com/document/d/1cXDOYfexw91b0WW6Lc7L0zhi6BW9CaQz/edit?pli=1" class="btn cv_button rounded-pill" style="--i:9;"><span class="cv_font">Download CV</span></a>
                                 </div>
                             </div>
                         </div>
@@ -122,10 +122,12 @@
                 
                 <div class="col text_container mt-3 move_left name_container" style="--i:11;">
                     <span class="name">
+                    <a href="https://github.com/peacode21/textr" class="links">
                         <b>"Textr" is an innovative social media web application that combines the best features of popular platforms like Facebook and Instagram. With its user-friendly interface and robust functionality, Textr provides a dynamic and engaging online platform for connecting with friends, sharing content, and discovering new interests.<br>
 
                         Textr revolutionizes the social media landscape by providing a versatile and engaging platform that connects people, facilitates content sharing, and encourages meaningful interactions. With its extensive features and user-centric design, Textr offers an immersive social experience for individuals to express themselves, stay connected with their network, and explore new horizons.
                         </b>
+                    </a>
                     </span>
                 </div>
             </div>
@@ -135,10 +137,13 @@
             <div class="row">
                 <div class="col text_container mt-3 move_right name_container" style="--i:12;"> 
                     <span class="name">
+                        
+                    <a href="https://github.com/peacode21/lofty_career" class="links">
                         <b>"Lofty Career" is a comprehensive job portal web application designed to connect job seekers with potential employers. Inspired by popular platforms like Indeed and Glassdoor, Lofty Career provides a user-friendly interface that enables users to efficiently search and apply for jobs, while also offering employers the opportunity to post job listings and find suitable candidates.<br>
 
                             Lofty Career aims to bridge the gap between job seekers and employers, providing an intuitive and efficient platform for job search and recruitment. With its range of features and user-friendly interface, the web app empowers individuals in their career journeys and enhances the hiring process for employers.
                         </b>
+                    </a>
                     </span>
                 </div>
 
@@ -365,9 +370,13 @@
     
 
 
-                <!-- Javascript manual script -->
+                <!-- Javascript Changing Skill script -->
 
-    <script type="text/javascript" lang="javascript">
+                <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+                <!-- Javascript Manual script-->
+
+    <script src="{{ url_for('static',filename='js/typed.js')}}"></script>
         
     </script>
 

@@ -142,6 +142,14 @@ body{
     margin-right:25%;
     width:50%;
 }
+.links{
+    text-decoration: none;
+    color: aliceblue;
+}
+.links:hover{
+    text-decoration: none;
+    color: aliceblue;
+}
 .move_left{
     animation: slideLeft .7s ease forwards;
     animation-delay: .7s;
