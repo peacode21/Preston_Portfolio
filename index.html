@@ -199,50 +199,16 @@
                     <hr class="hr_proj">
                 </div>
                 
-                {% with m=get_flashed_messages() %}
-                {% if m: %}
-                {% for msg in m%}
-                <div class="col-11 mt-3 mx-4">
-                    <span class="alert alert-secondary">{{msg}}</span>
-                </div>
-            
-                {% endfor %}
-                {% endif %}
-                {% endwith %}
-
                 <div class="col-6 mb-3 form_div">
-                    <form method="post" action="{{ url_for('contact_form')}}" class="form">
-                        <div class="row mb-1">
-                            <div class="col-12">
-                                <span class="form_name">Name:</span> 
-                            </div>
-                            <div class="col">
-                                <input type="text" placeholder="Input your name here..." name="name" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row mb-1">
-                            <div class="col-12">
-                                <span class="form_name">Email:</span> 
-                            </div>
-                            <div class="col">
-                                <input type="email" placeholder="Input your name here..." name="email" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-12">
-                                <span class="form_name">Message:</span> 
-                            </div>
-                            <div class="col">
-                                <textarea type="text" name="message" class="form-control"></textarea>
-                            </div>
-                        </div>
                         <div class="row mb-2">
                             <div class="col">
-                                <button type="submit" class="btn btn_color form-control">Send Message 
+				    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfR55PP-LSctHiYGC0Pn5ZfocAsV3TcjjBd9Q549zsySqFVVg/viewform?usp=sharing" target="_blank">
+                                <button type="submit" class="btn btn-light rounded">
+					<span class="text-dark">Get in Touch</span>  
                                     <span class="fa-solid fa-paper-plane"></span></button>
+				    </form>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
             <hr class="hr_proj">
