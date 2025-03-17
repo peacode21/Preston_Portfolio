@@ -174,10 +174,13 @@ body{
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
-.pic_container{
-    margin-left: 7%;
-    margin-right: 3%;
+@media (min-width: 768px) { /* Apply move_left only on medium screens and above */
+    .pic_container {
+    	margin-left: 7%;
+    	margin-right: 3%;
+    }
 }
+
 .picture{
     width:80%;
     padding:5%;
