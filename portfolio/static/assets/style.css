@@ -133,10 +133,8 @@ body{
     color:white;
     margin-left:5%;
 }
-@media (min-width: 768px) {
-	.intro{
-	    margin-left:3%;
-	}
+.intro{
+    margin-left:3%;
 }
 .last_hr{
     color:white;
@@ -205,14 +203,14 @@ body{
     font-size:20px ;
 }
 .rights {
-    font-size: 0.875rem; /* Small text by default */
+    font-size: 15px; /* Small text by default */
     color:rgb(208, 207, 207);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @media (min-width: 768px) {
     .rights {
-        font-size: 1rem; /* Normal text on medium screens and larger */
+        font-size: 20px; /* Normal text on medium screens and larger */
 	color:rgb(208, 207, 207);
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
