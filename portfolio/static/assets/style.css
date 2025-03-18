@@ -95,7 +95,7 @@ body{
     animation-delay: calc(.2s * var(--i));
 }
 .footer_cont{
-    margin-left:5%;
+    margin-left:2%;
 }
 .footer_div{
     margin-right:8%
