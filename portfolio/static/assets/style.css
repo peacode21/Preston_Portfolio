@@ -165,10 +165,10 @@ body{
 .name_container:hover{
     font-size: 120%;
 }
-.nav{
-    margin-left: 70%;
+.nav_menu{
+    margin-left: 65%;
 }
-.nav a {
+.nav_menu a {
     display:inline-block;
     transition: .3s;
     animation: slideTop .5s ease forwards;
