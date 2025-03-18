@@ -204,9 +204,13 @@ body{
 .quote{
     font-size:20px ;
 }
+@media (min-width: 768px) {
+	.rights_margin{
+	    margin-left:37%;
+	}
+}
 .rights{
     color:rgb(208, 207, 207);
-    margin-left:37%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .scroll_navbar{
@@ -214,7 +218,7 @@ body{
     overflow-y: scroll;
 }
 .scroll_navbar::-webkit-scrollbar {
-    width: 7px;
+    width: 6px;
 }
 
 .scroll_navbar::-webkit-scrollbar-track {
