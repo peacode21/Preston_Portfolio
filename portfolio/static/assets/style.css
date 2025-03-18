@@ -204,10 +204,20 @@ body{
 .quote{
     font-size:20px ;
 }
-.rights{
+.rights {
+    font-size: 0.875rem; /* Small text by default */
     color:rgb(208, 207, 207);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+@media (min-width: 768px) {
+    .rights {
+        font-size: 1rem; /* Normal text on medium screens and larger */
+	color:rgb(208, 207, 207);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
 .scroll_navbar{
     height: 655px;
     overflow-y: scroll;
