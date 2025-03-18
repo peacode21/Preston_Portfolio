@@ -140,9 +140,7 @@ body{
 }
 .last_hr{
     color:white;
-    margin-left:25%;
-    margin-right:25%;
-    width:50%;
+    width:100%;
 }
 .links{
     text-decoration: none;
