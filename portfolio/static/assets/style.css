@@ -133,8 +133,10 @@ body{
     color:white;
     margin-left:5%;
 }
-.intro{
-    margin-left:3%;
+@media (min-width: 768px) {
+	.intro{
+	    margin-left:3%;
+	}
 }
 .last_hr{
     color:white;
