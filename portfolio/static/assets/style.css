@@ -204,11 +204,6 @@ body{
 .quote{
     font-size:20px ;
 }
-@media (min-width: 768px) {
-	.rights_margin{
-	    margin-left:30%;
-	}
-}
 .rights{
     color:rgb(208, 207, 207);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
